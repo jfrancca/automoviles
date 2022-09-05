@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             'celular' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'habeas_data' => ['required', 'string', 'max:255'],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            // 'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
         $user = User::create([
@@ -56,13 +56,17 @@ class RegisteredUserController extends Controller
             'celular' => $request->celular,
             'email' => $request->email,
             'habeas_data' => $request->habeas_data,
-            'password' => Hash::make($request->password),
+            // 'password' => Hash::make($request->password),
         ]);
 
-        event(new Registered($user));
+        // event(new Registered($user));
 
-        Auth::login($user);
+        // Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+        return back()->with('mensaje', 'Registro Exitoso');
+
+        // return redirect()->route('auth.register')->with('success','Registro Exitoso');
+
+        // return redirect(RouteServiceProvider::HOME);
     }
 }
