@@ -46,10 +46,14 @@
             </div>
 
             <!-- Departamento -->
-            <div>
+            <div class="mt-4">
                 <x-label for="departamento" :value="__('Departamento')" />
 
-                <x-input id="departamento" class="block mt-1 w-full" type="text" name="departamento" :value="old('departamento')" required autofocus />
+                <select id="departamento" name="departamento" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <option value="">-- Selecciona un Departamento --</option>
+                    <option value="Amazonas">Amazonas</option>
+                    <option value="Amazonas">Amazonas</option>
+                </select>
             </div>
 
             <!-- Ciudad -->
