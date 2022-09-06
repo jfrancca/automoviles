@@ -11,21 +11,7 @@ class HomeController extends Controller
 
         $cantidad_registros = User::count();
 
-        if ($cantidad_registros == 4) {
-
-            $i = 0;
-            $array = [];
-    
-            while( $i <= 5)
-            {
-                $array[] = rand(1, 5);
-                $i++;
-            }
-    
-            $num_aleatorio = array_pop($array);
-
-            $usuarios = User::where('id', $num_aleatorio)->get();
-        }
+        $usuarios = User::where('id', rand(1, $cantidad_registros))->get();
 
         return view('home.index', [
             'usuarios' => $usuarios,
