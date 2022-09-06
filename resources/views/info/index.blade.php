@@ -2,7 +2,7 @@
     <body class="text-gray-700 bg-white antialiased" style="font-family: 'Roboto', sans-serif">
   
         <nav class="text-center flex-wrap p-6">
-            @if ($cantidad_registros >= 5)
+            @if ($cantidad_registros >= 4)
                 <a href="{{ route('home.index') }}" class="text-cyan-50 bg-red-700 font-bold rounded-full mt-6 py-4 px-8 shadow-lg uppercase tracking-wider hover:border-red hover:text-white hover:bg-blue-300">Realizar Sorteo</a href="">                
             @else
                 
