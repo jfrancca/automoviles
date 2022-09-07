@@ -60,10 +60,17 @@
             </div>
 
             <!-- Ciudad -->
-            <div>
+            <div class="mt-4">
                 <x-label for="ciudad" :value="__('Ciudad')" />
 
-                <x-input id="ciudad" class="block mt-1 w-full" type="text" name="ciudad" :value="old('ciudad')" required autofocus />
+                <select id="ciudad" name="ciudad" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <option value="">-- Selecciona una Ciudad --</option>
+                    @foreach ($ciudades as $ciudad)
+                        <option value="{{$ciudad->nombre}}">{{$ciudad->nombre}}</option>                        
+                    @endforeach
+                </select>
+
+                {{-- {!! F::select('departamento', $departamento, null) !!} --}}
             </div>
 
             <!-- Celular -->
