@@ -9,7 +9,7 @@
             @endif        
         </nav>
 
-        <div class="py-20 bg-cover bg-no-repeat bg-fixed" style="background-image: url(https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&w=1600)">
+        <div class="py-20 bg-cover bg-no-repeat bg-fixed" style="background-image: url({{ asset('img/car.jpg') }}) ">
             <div class="container m-auto text-center px-6 opacity-100">
                 <h2 class="text-6xl font-bold mb-2 text-red-700 pb-6">Regitra tus datos y participa en el sorteo</h2>
                 <a href="{{ route('register') }}" class="bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider hover:border-transparent hover:text-white hover:bg-blue-300 transition-all">Registro de datos</a>
@@ -25,7 +25,7 @@
                 <p class="text-gray-600 mb-8">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of.</p>
             </div>
                 <div class="w-full md:w-1/2">
-                    <img class="rounded-lg" src="https://pbs.twimg.com/media/CR45LOXVEAADG5E.jpg" alt="Vortex" />
+                    <img class="rounded-lg" src="{{ asset('img/car-red.jpg') }}" alt="Vortex" />
                 </div>
             </div>
         </section>
