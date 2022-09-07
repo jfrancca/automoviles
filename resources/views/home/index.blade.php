@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="w-full xl:w-1/2 h-screen">
-        <img class="object-cover w-full h-screen" src="https://images.pexels.com/photos/10967/pexels-photo-10967.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Robot Group">
+        <img class="object-cover w-full h-screen" src="{{ asset('img/ganador.jpg') }}" alt="Robot Group">
     </div>
 </main>
 
