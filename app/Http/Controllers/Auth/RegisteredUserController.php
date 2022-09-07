@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\Ciudad;
 use App\Exports\UsersExport;
 use App\Models\Departamento;
 use Illuminate\Http\Request;
@@ -25,10 +26,12 @@ class RegisteredUserController extends Controller
     {
         
         $departamentos = Departamento::all();
+        $ciudades = Ciudad::all();
         // $departamentos1 = Departamento::pluck('nombre', 'id');
         
         return view('auth.register', [
             'departamentos' => $departamentos,
+            'ciudades' => $ciudades
             // 'departamentos1' => $departamentos1
         ]);
     }
