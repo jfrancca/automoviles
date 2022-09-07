@@ -34,6 +34,8 @@ Route::middleware('guest')->group(function () {
                 ->name('password.update');
 });
 
+Route::get('users/export/', [RegisteredUserController::class, 'export'])->name('excel');
+
 Route::middleware('auth')->group(function () {
     Route::get('verify-email', [EmailVerificationPromptController::class, '__invoke'])
                 ->name('verification.notice');
