@@ -16,7 +16,22 @@ class DepartamentoSeeder extends Seeder
     public function run()
     {
         Departamento::insert([
-            'nombre' => 'RISARALDA'
+            'nombre' => 'Amazonas'
+        ]);
+        Departamento::insert([
+            'nombre' => 'Antioquia'
+        ]);
+        Departamento::insert([
+            'nombre' => 'Arauca'
+        ]);
+        Departamento::insert([
+            'nombre' => 'Atlántico'
+        ]);
+        Departamento::insert([
+            'nombre' => 'Bogotá'
+        ]);
+        Departamento::insert([
+            'nombre' => 'Bolívar'
         ]);
     }
 }

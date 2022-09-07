@@ -16,7 +16,6 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-
     User::insert([
         'created_at' => date('Y-m-d'),
         'name' => 'JUAN CAMILO',
@@ -36,7 +35,7 @@ class UserSeeder extends Seeder
         'departamento' => 'RISARALDA',
         'ciudad' => 'PEREIRA',
         'celular' => '654654654',
-        'email' => 'carlos@carlos.com',
+        'email' => 'carlos@carlos.com',      
         'habeas_data' => 'SI',
     ]);
     User::insert([
