@@ -51,9 +51,12 @@
 
                 <select id="departamento" name="departamento" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
                     <option value="">-- Selecciona un Departamento --</option>
-                    <option value="Amazonas">Amazonas</option>
-                    <option value="Amazonas">Amazonas</option>
+                    @foreach ($departamentos as $departamento)
+                        <option value="{{$departamento->nombre}}">{{$departamento->nombre}}</option>                        
+                    @endforeach
                 </select>
+
+                {{-- {!! F::select('departamento', $departamento, null) !!} --}}
             </div>
 
             <!-- Ciudad -->
@@ -80,8 +83,16 @@
             <!-- Habeas Data -->
             <div class="mt-4">
                 <x-label for="habeas_data" :value="__('Habeas Data')" />
+                <p class="text-xs text-justify">Autorizo el tratamiento de mis datos de acuerdo con la
+                    finalidad establecida en la política de protección de datos personales”. <br>
+                <a class="text-base" href="#">Haga clic aquí</a>    
+                </p>
 
-                <x-input id="habeas_data" class="block mt-1 w-full" type="text" name="habeas_data" :value="old('habeas_data')" required />
+                <select name="habeas_data" class="block mt-1 w-full rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="SI">SI</option>
+                    <option value="NO">NO</option>
+                </select>                                
             </div>
 
             {{-- <!-- Password -->
